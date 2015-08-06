@@ -1,0 +1,36 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate completo utilizando Hapi e Mongoose",
+  "main": "app.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha --bail --tdd tests/**/*-test.js"
+  },
+  "author": "Alan Hoffmeister <alanhoffmeister@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alanhoff/boilerplate-hapi-mongodb.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.3",
+    "bluebird": "^2.9.34",
+    "boom": "^2.8.0",
+    "bootstrap": "^3.3.5",
+    "config": "^1.15.0",
+    "hapi": "^8.8.1",
+    "joi": "^6.6.1",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.1.1",
+    "mout": "^0.11.0",
+    "winston": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-uglify": "^0.9.1",
+    "nodemon": "^1.4.0"
+  }
+}

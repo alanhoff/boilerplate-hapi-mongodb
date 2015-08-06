@@ -1,0 +1,19 @@
+{
+  "winston": {
+    "timestamp": true,
+    "prettyPrint": true,
+    "level": "debug"
+  },
+  "mongoose": {
+    "uri": "mongodb://mongodb.lxc/boilerplate"
+  },
+  "hapi": {
+    "connection": {
+      "host": "localhost",
+      "port": 8080
+    }
+  },
+  "server": {
+    "signal": "SIGINT"
+  }
+}

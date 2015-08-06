@@ -1,0 +1,6 @@
+{
+  "winston": {
+    "prettyPrint": false,
+    "level": "info"
+  }
+}
