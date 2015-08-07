@@ -6,6 +6,9 @@ var mongoose = require('mogoose');
 var config = require('config');
 var log = require('../lib/log');
 
+// Pré carregamos nossos modelos
+require('../models');
+
 exports.register = function(server, next) {
   mongoose.connect(config.get('mongoose.uri'));
 

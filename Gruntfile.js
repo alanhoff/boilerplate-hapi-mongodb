@@ -1,3 +1,5 @@
+// Este gruntfile é apenas um bootstrap para todas as tarefas dentro
+// da pasta tasks
 var mout = require('mout');
 var crypto = require('crypto');
 var fs = require('fs');

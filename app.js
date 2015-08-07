@@ -1,3 +1,4 @@
+// Aqui é onde a magia acontece :-)
 var server = require('../lib/server');
 var config = require('config');
 var inst = null;
