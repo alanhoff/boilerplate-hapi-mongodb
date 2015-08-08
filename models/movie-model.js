@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var helper = require('../lib/helper');
+var schemas = require('../schemas');
 
 // Criamos o schema de acordo com nossas necessidades
 var movie = new mongoose.Schema({
@@ -15,6 +16,11 @@ var movie = new mongoose.Schema({
 
 // Adiciona o plugin de datas
 movie.plugin(helper.mongoose.plugins.autodate);
+
+// PPlugin de validação
+movie.plugin(helper.mongoose.plugins.validate, {
+  create: schemas.Movie.create
+});
 
 // Exportamos o model
 module.exports = mongoose.model('Movie', movie);

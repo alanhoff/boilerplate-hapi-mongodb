@@ -1,10 +1,10 @@
 var fs = require('fs');
 module.exports = [];
 
-fs.readdirSync('.')
-  .filter(function(ctrl) {
-    return ctrl.match(/-mdlw.\js/i);
+fs.readdirSync(__dirname)
+  .filter(function(mdlw) {
+    return mdlw.match(/-mdlw\.js/i);
   })
-  .forEach(function(ctrl) {
-    module.exports.push(require('./' + ctrl));
+  .forEach(function(mdlw) {
+    module.exports.push(require('./' + mdlw));
   });

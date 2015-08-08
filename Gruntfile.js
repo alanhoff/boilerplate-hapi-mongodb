@@ -18,7 +18,7 @@ module.exports = function(grunt) {
       return task.match(/-task\.js/i);
     })
     .map(function(task) {
-      return require('./task/' + task);
+      return require('./tasks/' + task)(grunt);
     })
     .reduce(function(prev, curr) {
       return mout.object.merge(prev, curr);

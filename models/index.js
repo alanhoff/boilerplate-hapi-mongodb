@@ -5,8 +5,8 @@ require('fs').readdirSync(__dirname)
     return schema.match('-model.js');
   })
   .map(function(schema) {
-    return [schema, require('./' + schema)];
+    return [schema.replace(/-model\.js/i, ''), require('./' + schema)];
   })
   .forEach(function(schema) {
-    exports[mout.string.pascalCase(schema[0])] = require('./' + schema[1]);
+    exports[mout.string.pascalCase(schema[0])] = schema[1];
   });

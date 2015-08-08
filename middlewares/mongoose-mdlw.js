@@ -2,19 +2,19 @@
 // espere a conexão com o banco de dados antes de iniciar os
 // controladores, evitando que eles recebam requisições antes
 // do banco estar devidamente conectado
-var mongoose = require('mogoose');
+var mongoose = require('mongoose');
 var config = require('config');
 var log = require('../lib/log');
 
 // Pré carregamos nossos modelos
 require('../models');
 
-exports.register = function(server, next) {
+exports.register = function(server, options, next) {
   mongoose.connect(config.get('mongoose.uri'));
 
   // Assim que o MongoDB connectar, continuamos a carregar
   // os demais middlewares
-  mongoose.connection.once('connect', function() {
+  mongoose.connection.once('open', function() {
     log.info('Servidor MongoDB connectado');
     next();
   });

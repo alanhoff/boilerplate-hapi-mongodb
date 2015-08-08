@@ -1,8 +1,8 @@
 // Aqui é onde a magia acontece :-)
-var server = require('../lib/server');
+var server = require('./lib/server');
 var config = require('config');
 var inst = null;
-var log = require('../lib/log');
+var log = require('./lib/log');
 
 log.info('Iniciando bootstrap do servidor HTTP');
 server.start()
