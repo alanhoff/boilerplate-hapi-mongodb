@@ -1,5 +1,5 @@
 // Transforma nosso bundle javascript em um arquivo minificado
-module.exports = function(grunt) {
+export default (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   return {

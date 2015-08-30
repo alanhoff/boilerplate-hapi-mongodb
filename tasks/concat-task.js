@@ -1,7 +1,7 @@
 // Geramos nosso CSS e nosso JS a partir da concatenação de vários
 // arquivos, guardamos seu nome como a data atual em SHA1 para evitar
 // qualquer mecanismo de cache
-module.exports = function(grunt) {
+export default (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-concat');
 
   return {

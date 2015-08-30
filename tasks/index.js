@@ -1,10 +1,18 @@
-var fs = require('fs');
-module.exports = [];
+import fs from 'fs';
 
-fs.readdirSync('.')
-  .filter(function(ctrl) {
-    return ctrl.match(/-task.\js/i);
-  })
-  .forEach(function(ctrl) {
-    module.exports.push(require('./' + ctrl));
+// Uma array para guardar todas nossas tasks
+let tasks = [];
+
+fs.readdirSync(__dirname)
+
+  // Queremos apenas os arquivos que terminam com -task.js
+  .filter((file) => file.match(/-task.\js/i))
+  .forEach((file) => {
+    System.import(`./${file}`)
+      .then((module) => {
+        console.log(module);
+        tasks.push(module);
+      });
   });
+
+export default tasks;

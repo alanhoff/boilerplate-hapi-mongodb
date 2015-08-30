@@ -1,5 +1,5 @@
 // Remove as pastas que são criadas durante a build
-module.exports = function(grunt) {
+export default (grunt) => {
   grunt.loadNpmTasks('grunt-replace');
 
   return {
